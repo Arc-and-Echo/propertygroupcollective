@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Owner Dashboard Login | Property Group Collective</title>
+ <meta name="robots" content="noindex, nofollow" />
+ <link rel="icon" type="image/svg+xml" href="favicon.svg?v=1" />
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=1" />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="styles.css?v=38" />
+</head>
+<body class="subpage login-page">
+
+ <nav class="hud solid">
+  <a class="hud-brand" href="/">PROPERTY GROUP<span class="dim">/</span>COLLECTIVE</a>
+  <span class="hud-mid">OWNER PORTAL</span>
+  <a class="hud-cta" href="/#appraisal">GET AN APPRAISAL</a>
+ </nav>
+
+ <main class="login-wrap">
+  <div class="login-card">
+   <a class="login-logo" href="/" aria-label="Property Group Collective home">
+    <img src="favicon.svg?v=1" alt="NLPM" width="56" height="56" />
+   </a>
+   <span class="kicker">OWNER PORTAL</span>
+   <h1 class="page-title">Login to the Dashboard</h1>
+   <p class="login-lede">Live rent tracking, statements, inspection reports and maintenance approvals for your portfolio.</p>
+   <form class="modal-form" id="login-form">
+    <input type="email" name="email" placeholder="Email address" autocomplete="username" required />
+    <input type="password" name="password" placeholder="Password" autocomplete="current-password" required />
+    <button class="btn-primary" type="submit">Sign In</button>
+    <p class="form-done" hidden>The owner portal is launching soon. Your property manager will email your login details when your account is ready.</p>
+   </form>
+   <a class="login-back" href="/">&#8249; Back to the website</a>
+  </div>
+ </main>
+
+ <script>
+  // Portal backend ships later  for now explain rather than dead-end.
+  document.getElementById("login-form").addEventListener("submit", (e) => {
+   e.preventDefault();
+   e.target.querySelector(".form-done").hidden = false;
+  });
+ </script>
+</body>
+</html>
